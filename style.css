@@ -1,0 +1,142 @@
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* LATAR BELAKANG */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #818cf8);
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* KOTAK KALKULATOR */
+.calculator {
+    width: 350px;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* JUDUL */
+h1 {
+    text-align: center;
+    color: #4338ca;
+    font-size: 26px;
+}
+
+.subtitle {
+    text-align: center;
+    color: gray;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+/* LAYAR */
+.display {
+    background: #eef2ff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#history {
+    height: 22px;
+    text-align: right;
+    color: #888;
+    font-size: 14px;
+}
+
+#result {
+    min-height: 42px;
+    text-align: right;
+    color: #312e81;
+    font-size: 32px;
+    font-weight: bold;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* TOMBOL */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 55px;
+    border: none;
+    border-radius: 12px;
+
+    background: #e0e7ff;
+    color: #312e81;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    filter: brightness(0.94);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+/* TOMBOL KHUSUS */
+.special {
+    background: #f87171;
+    color: white;
+}
+
+/* OPERATOR */
+.operator {
+    background: #818cf8;
+    color: white;
+}
+
+/* HASIL */
+.equal {
+    background: #4338ca;
+    color: white;
+}
+
+/* TOMBOL NOL */
+.zero {
+    grid-column: span 2;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 400px) {
+    .calculator {
+        width: 92%;
+        padding: 18px;
+    }
+
+    button {
+        height: 50px;
+    }
+}
